@@ -12,6 +12,7 @@ export class DataComponent {
 
   serviceData: any;
   errorMessage: any;
+  greeting: any;
 
   constructor(private fakeService: FakeService) {
 
@@ -25,6 +26,7 @@ export class DataComponent {
     this.fakeService.getDataV1().subscribe({
       next: data => {
         this.serviceData = data;
+        this.setGreeting();
       },
       error: err => {
         this.errorMessage = err.statusText;
@@ -34,5 +36,16 @@ export class DataComponent {
       },
     })
   }
+
+  setGreeting(){
+    if (this.serviceData.time < 10){
+      this.greeting = "Good Morning";
+      } else if (this.serviceData.time < 20) {
+      this.greeting = "Good Day";
+      } else {
+      this.greeting = "Good Evening";
+    }
+  }
+
 
 }

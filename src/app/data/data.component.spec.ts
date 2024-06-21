@@ -32,7 +32,7 @@ describe('DataComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should getServiceData return serviceData', () => {
+  it('should getServiceData set serviceData', () => {
     const expRes = {
       name: "Martarelli"
     };
@@ -52,5 +52,37 @@ describe('DataComponent', () => {
     expect(component.errorMessage).toBe('Not Found');
   });
 
+  it('should getServiceData set Good Morning', () => {
+    const expRes = {
+      name: "Martarelli",
+      time: 7
+    };
+    jest.spyOn(fakeServiceMock, 'getDataV1').mockReturnValue(of(expRes));
+    fixture.detectChanges();
+
+    expect(component.greeting).toBe("Good Morning");
+  });
+
+  it('should getServiceData set Good Day', () => {
+    const expRes = {
+      name: "Martarelli",
+      time: 14
+    };
+    jest.spyOn(fakeServiceMock, 'getDataV1').mockReturnValue(of(expRes));
+    fixture.detectChanges();
+
+    expect(component.greeting).toBe("Good Day");
+  });
+
+  it('should getServiceData set Good Evening', () => {
+    const expRes = {
+      name: "Martarelli",
+      time: 22
+    };
+    jest.spyOn(fakeServiceMock, 'getDataV1').mockReturnValue(of(expRes));
+    fixture.detectChanges();
+
+    expect(component.greeting).toBe("Good Evening");
+  });
 
 });
