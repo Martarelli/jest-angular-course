@@ -1,27 +1,60 @@
+
 # JestAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.4.
+Esse projeto foi gerado com o Angular CLI versão 18.0.4 e é configurado para usar o Framework de Testes Jest.
+Tem como objetivo o exercicio do curso que fiz e documentar como realizar testes utilizando o Jest.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Referência
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ - [Jest](https://jestjs.io/pt-BR/)
+ - [Angular](https://angular.dev/)
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Autores
 
-## Running unit tests
+- [@martarelli](https://br.linkedin.com/in/rmartarelli)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Rodando localmente
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Clone o projeto
 
-## Further help
+```bash
+  git clone https://github.com/Martarelli/jest-angular-course.git
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Entre no diretório do projeto
+
+```bash
+  cd jest-angular-course
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Pronto, o Projeto está pronto para rodar os testes.
+
+
+## Rodando os testes
+
+Para rodar os testes, rode o seguinte comando
+
+```bash
+  npm run test
+```
+
+Para verificar a cobertura dos testes
+```bash
+  npm run test:coverage
+```
+
+
+## Screenshots
+
+Tela de cobertura de testes.
+![App Coverage](https://images2.imgbox.com/33/3e/yHHi9cYg_o.png)
