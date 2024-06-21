@@ -30,7 +30,7 @@ export class FakeService {
     return this.http.post(data, url, httpOptions);
   }
 
-  private handleError<T>(operation = `operation`){
+  private handleError<T>(operation: any){
     return (error: HttpErrorResponse): Observable<T> => {
 
       //TODO: send the error to remote logging infrastruture
